@@ -7,7 +7,7 @@ import {
     FaEnvelope,
 } from "react-icons/fa";
 
-type SocialData = {
+export type SocialData = {
     icon: JSX.Element;
     url: string;
     description: string;
