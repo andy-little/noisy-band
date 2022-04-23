@@ -15,6 +15,8 @@ const Socials: React.FC<SocialsProps> = ({ data }) => {
                         className="social-icons-single"
                         href={url}
                         aria-label={description}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         {icon}
                     </a>

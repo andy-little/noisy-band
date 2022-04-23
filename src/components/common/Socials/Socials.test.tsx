@@ -22,4 +22,7 @@ test("should render links icons", () => {
     render(<Socials data={data} />);
     const itunes = screen.getByRole("link", { name: /itunes/i });
     expect(itunes).toBeInTheDocument();
+
+    const links = screen.getAllByRole("link");
+    expect(links).toHaveLength(2);
 });
