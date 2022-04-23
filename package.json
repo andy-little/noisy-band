@@ -10,6 +10,8 @@
         "@types/node": "^16.11.27",
         "@types/react": "^18.0.6",
         "@types/react-dom": "^18.0.2",
+        "eslint-plugin-jest-dom": "^4.0.1",
+        "eslint-plugin-testing-library": "^5.3.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-icons": "^4.3.1",
@@ -36,6 +38,7 @@
         ]
     },
     "devDependencies": {
+        "eslint": "^8.14.0",
         "jest-watch-typeahead": "^0.6.5"
     }
 }
