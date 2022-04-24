@@ -1,0 +1,27 @@
+.btn {
+    padding: 0.3rem 1rem;
+    background-color: var(--clr-off-white);
+    border: none;
+    border-radius: 0.25rem;
+    font-family: "market-deco", arial;
+    text-transform: capitalize;
+    font-size: clamp(0.9rem, 3vw, 1.25rem);
+    transition: opacity 300ms linear;
+
+    &:hover {
+        opacity: 0.8;
+    }
+    &:focus {
+        outline: var(--clr-off-white) 0.2rem solid;
+    }
+
+    &.primary {
+        background-color: var(--clr-primary);
+    }
+    &.secondary {
+        background-color: var(--clr-secondary);
+    }
+    &.tertiary {
+        background-color: var(--clr-tertiary);
+    }
+}

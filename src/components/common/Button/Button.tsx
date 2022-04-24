@@ -1,7 +1,22 @@
 import React from "react";
+import style from "./Button.module.scss";
+export enum BtnClr {
+    // css must use these class names
+    PRIMARY = "primary",
+    SECONDARY = "secondary",
+    TERTIARY = "tertiary",
+}
 
-const Button = () => {
-    return <div>Button</div>;
+interface ButtonProps {
+    children: string;
+    colour?: BtnClr;
+}
+const Button: React.FC<ButtonProps> = ({ children, colour }) => {
+    return (
+        <button className={`${style.btn} ${colour && style[colour]}`}>
+            {children}
+        </button>
+    );
 };
 
 export default Button;
