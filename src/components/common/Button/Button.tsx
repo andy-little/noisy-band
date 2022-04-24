@@ -8,7 +8,7 @@ export enum BtnClr {
 }
 
 interface ButtonProps {
-    children: string;
+    children: React.ReactChild;
     colour?: BtnClr;
 }
 const Button: React.FC<ButtonProps> = ({ children, colour }) => {

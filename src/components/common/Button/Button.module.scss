@@ -1,12 +1,20 @@
 .btn {
-    padding: 0.3rem 1rem;
+    display: block;
+    width: fit-content;
+    max-height: 100%;
+    padding: 0.4rem 0.9rem;
     background-color: var(--clr-off-white);
+    color: var(--clr-bg);
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.3rem;
     font-family: "market-deco", arial;
     text-transform: capitalize;
+    text-decoration: none;
     font-size: clamp(0.9rem, 3vw, 1.25rem);
     transition: opacity 300ms linear;
+    line-height: 1;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
 
     &:hover {
         opacity: 0.8;
