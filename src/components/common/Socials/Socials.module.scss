@@ -1,0 +1,6 @@
+.icon {
+    transition: opacity 300ms linear;
+    &:hover {
+        opacity: 0.7;
+    }
+}

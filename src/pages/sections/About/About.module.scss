@@ -1,0 +1,13 @@
+.socials {
+    border-top: solid var(--clr-primary) var(--section-border-thickness);
+    svg {
+        font-size: clamp(1rem, 7vw, 1.7rem);
+    }
+}
+.icons {
+    margin: 0.8rem auto;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

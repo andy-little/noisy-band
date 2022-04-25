@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Socials.module.scss";
 import { SocialData } from "../../../constants/SocialIcons";
 
 interface SocialsProps {
@@ -12,7 +13,7 @@ const Socials: React.FC<SocialsProps> = ({ data }) => {
                 return (
                     <a
                         key={id}
-                        className="social-icon"
+                        className={style.icon}
                         href={url}
                         aria-label={description}
                         target="_blank"

@@ -5,5 +5,6 @@ import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import Subscribe from "./Subscribe/Subscribe";
 import Video from "./Video/Video";
+import Home from "../Home/Home";
 
-export { About, Album, EP, Footer, Hero, Subscribe, Video };
+export { About, Album, EP, Footer, Hero, Subscribe, Video, Home };

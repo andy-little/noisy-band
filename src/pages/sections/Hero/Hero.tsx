@@ -1,4 +1,4 @@
-import logo from "../../../static/images/Logo.png";
+import logo from "../../../static/images/logo.png";
 import style from "./Hero.module.scss";
 import { Section } from "../../../components/common";
 import Colour from "../../../constants/Colour";
