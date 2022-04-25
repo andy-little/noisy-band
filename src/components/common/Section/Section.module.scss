@@ -1,0 +1,19 @@
+.section {
+    border-top: var(--section-border-thickness) solid var(--clr-bg);
+    border-bottom: var(--section-border-thickness) solid var(--clr-bg);
+    padding: clamp(2em, 3vw, 4.5em) 0;
+
+    &.primary {
+        border-top: var(--section-border-thickness) solid var(--clr-primary);
+        border-bottom: var(--section-border-thickness) solid var(--clr-primary);
+    }
+    &.secondary {
+        border-top: var(--section-border-thickness) solid var(--clr-secondary);
+        border-bottom: var(--section-border-thickness) solid
+            var(--clr-secondary);
+    }
+    &.tertiary {
+        border-top: var(--section-border-thickness) solid var(--clr-tertiary);
+        border-bottom: var(--section-border-thickness) solid var(--clr-tertiary);
+    }
+}
