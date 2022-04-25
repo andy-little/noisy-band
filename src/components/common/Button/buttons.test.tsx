@@ -34,10 +34,6 @@ describe("link", () => {
 
 describe("button", () => {
     test("should render button with string as children and call function onclick", () => {
-        /* 
-        TODO
-        Make work with any args
-        */
         const callback = jest.fn();
         render(<Button cb={callback}>Test</Button>);
         const btn = screen.getByRole("button", { name: /test/i });
@@ -45,6 +41,7 @@ describe("button", () => {
         userEvent.click(btn);
         expect(callback).toHaveBeenCalledTimes(1);
     });
+
     test("should allow options args to work correctly", () => {
         const callback = jest.fn();
         render(

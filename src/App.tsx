@@ -12,7 +12,7 @@ const App = () => {
             <h2>Out Now!</h2>
             <Button
                 options={{ colour: BtnClr.PRIMARY }}
-                cb={(thing: string) => console.log(thing)}
+                cb={() => console.log("thing")}
             >
                 Listen
             </Button>
