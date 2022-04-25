@@ -1,5 +1,5 @@
 .container {
-    z-index: -100;
+    //z-index: -100;
     position: relative;
     background-image: url("../../../static/images/about-bg.jpg");
     background-size: cover;
@@ -7,15 +7,21 @@
     background-position: center;
     &:after {
         content: "";
-        z-index: -50;
+        //z-index: -50;
         position: absolute;
         inset: 0;
         opacity: 0.85;
         background-color: var(--clr-bg);
+        pointer-events: none;
     }
 }
-
+.content {
+    position: relative;
+    z-index: 100;
+}
 .socials {
+    position: relative;
+    z-index: 100;
     border-top: solid var(--clr-primary) var(--section-border-thickness);
     svg {
         font-size: clamp(1rem, 7vw, 1.7rem);
@@ -29,7 +35,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
 .bio {
-    max-width: var(--max-width);
     max-width: var(--max-width-text);
 }
