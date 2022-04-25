@@ -7,12 +7,12 @@ interface SocialsProps {
 
 const Socials: React.FC<SocialsProps> = ({ data }) => {
     return (
-        <div className="social-icons">
+        <>
             {data.map(({ icon, url, description, id }) => {
                 return (
                     <a
                         key={id}
-                        className="social-icons-single"
+                        className="social-icon"
                         href={url}
                         aria-label={description}
                         target="_blank"
@@ -22,7 +22,7 @@ const Socials: React.FC<SocialsProps> = ({ data }) => {
                     </a>
                 );
             })}
-        </div>
+        </>
     );
 };
 
