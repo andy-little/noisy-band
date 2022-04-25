@@ -1,13 +1,10 @@
 .container {
-    //z-index: -100;
     position: relative;
     background-image: url("../../../static/images/about-bg.jpg");
     background-size: cover;
-    /*  this doesn't work for mobile, need a fallback so it positions corectly    */
     background-position: center;
     &:after {
         content: "";
-        //z-index: -50;
         position: absolute;
         inset: 0;
         opacity: 0.85;
