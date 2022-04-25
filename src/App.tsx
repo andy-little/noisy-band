@@ -5,10 +5,14 @@ import { socialAndContactIcons } from "./constants/SocialIcons";
 import { Button, LinkBtn } from "./components/common";
 import Colour from "./constants/Colour";
 import { Section } from "./components/common";
+import { Hero } from "./pages/sections";
 
 const App = () => {
     return (
         <>
+            <Routes>
+                <Route path="/" element={<Hero />} />
+            </Routes>
             <Section colour={Colour.TERTIARY}>
                 <Socials data={socialAndContactIcons} />
             </Section>
