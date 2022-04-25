@@ -1,7 +1,8 @@
-import React from "react";
 import { LinkBtn, Quote, Section } from "../../../components/common";
 import Colour from "../../../constants/Colour";
 import style from "./Video.module.scss";
+import img from "../../../static/images/video.png";
+import { FaYoutube } from "react-icons/fa";
 
 const Video = () => {
     return (
@@ -12,6 +13,21 @@ const Video = () => {
                     Andy Little takes us on a journey which straddles musical
                     mountain peaks, valleys, deserts and the seas.
                 </Quote>
+
+                <a
+                    href="https://www.youtube.com/c/mrlittleofficial"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <div className={style.video_container}>
+                        <FaYoutube />
+                        <img
+                            src={img}
+                            alt="watch video"
+                            className={style.video}
+                        />
+                    </div>
+                </a>
                 <LinkBtn
                     url="https://www.youtube.com/c/mrlittleofficial"
                     options={{ colour: Colour.TERTIARY }}
