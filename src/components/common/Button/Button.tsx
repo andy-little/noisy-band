@@ -1,13 +1,9 @@
 import React from "react";
 import style from "./Button.module.scss";
-export enum BtnClr {
-    // css must use these class names
-    PRIMARY = "primary",
-    SECONDARY = "secondary",
-    TERTIARY = "tertiary",
-}
+import Colour from "../../../constants/Colour";
+
 export interface BtnOpts {
-    colour?: BtnClr;
+    colour?: Colour;
     label?: string;
 }
 interface ButtonProps {

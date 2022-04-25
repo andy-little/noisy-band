@@ -1,18 +1,19 @@
 import { screen, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Button, { BtnClr } from "./Button";
+import Button from "./Button";
+import Colour from "../../../constants/Colour";
 import LinkBtn from "./LinkBtn";
 
 describe("link", () => {
     test("should render link correctly and have correct colour", () => {
         render(
-            <LinkBtn url="www.test.com" options={{ colour: BtnClr.SECONDARY }}>
+            <LinkBtn url="www.test.com" options={{ colour: Colour.SECONDARY }}>
                 Test
             </LinkBtn>
         );
         const btn = screen.getByRole("link", { name: /test/i });
         expect(btn).toBeInTheDocument();
-        expect(btn).toHaveClass(BtnClr.SECONDARY);
+        expect(btn).toHaveClass(Colour.SECONDARY);
     });
 
     test("should render without options given", () => {
@@ -47,13 +48,13 @@ describe("button", () => {
         render(
             <Button
                 cb={callback}
-                options={{ colour: BtnClr.TERTIARY, label: "other" }}
+                options={{ colour: Colour.TERTIARY, label: "other" }}
             >
                 Test
             </Button>
         );
         const btn = screen.getByRole("button", { name: /other/i });
         expect(btn).toBeInTheDocument();
-        expect(btn).toHaveClass(BtnClr.TERTIARY);
+        expect(btn).toHaveClass(Colour.TERTIARY);
     });
 });
