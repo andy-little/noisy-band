@@ -3,12 +3,14 @@ import { Section } from "../../../components/common";
 import Colour from "../../../constants/Colour";
 import style from "./Subscribe.module.scss";
 import banner from "../../../static/images/banner.jpg";
+import { SubscribeForm } from "../../../components";
 
 const Subscribe = () => {
     return (
-        <Section colour={Colour.PRIMARY}>
+        <Section colour={Colour.TERTIARY}>
             <div className={`section-padding ${style.content}`}>
-                <h1>Subscribe</h1>
+                <h1>Mailing List</h1>
+                <SubscribeForm />
             </div>
             <img
                 className={style.banner}

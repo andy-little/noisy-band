@@ -1,9 +1,28 @@
 .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     h1 {
         color: var(--clr-off-white);
     }
     background-image: url("../../../static/images/bg.jpg");
     background-repeat: repeat;
+    input {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
+        width: 80vw;
+        max-width: 22rem;
+        background-color: white; //var(--clr-off-white);
+        border: none;
+        //border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        font-family: "archivo narrow", sans-serif;
+        letter-spacing: 0.15em;
+        font-size: clamp(0.8rem, 4vw, 1.1rem);
+        color: black;
+    }
 }
 .banner {
     //border-top: var(--clr-primary) solid var(--section-border-thickness);
