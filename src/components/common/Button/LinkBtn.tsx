@@ -1,17 +1,20 @@
 import React from "react";
 import style from "./Button.module.scss";
-import { BtnClr } from "./Button";
+import { BtnOpts } from "./Button";
 
-interface LinkBtnProps {
+export interface LinkBtnProps {
     children: React.ReactChild;
-    colour?: BtnClr;
+    options?: BtnOpts;
     url: string;
 }
-const LinkBtn: React.FC<LinkBtnProps> = ({ children, colour, url }) => {
+const LinkBtn: React.FC<LinkBtnProps> = ({ children, options, url }) => {
     return (
         <a
             href={url}
-            className={`${style.btn} ${colour && style[colour]}`}
+            className={`${style.btn} ${
+                options?.colour && style[options?.colour]
+            }`}
+            aria-label={options?.label ? options.label : ""}
             target="_blank"
             rel="noreferrer"
         >

@@ -10,8 +10,16 @@ const App = () => {
             <Socials data={socialAndContactIcons} />
             <h1>Cuckoo's Nest</h1>
             <h2>Out Now!</h2>
-            <Button colour={BtnClr.PRIMARY}>Listen</Button>
-            <LinkBtn url="https://www.google.com" colour={BtnClr.PRIMARY}>
+            <Button
+                options={{ colour: BtnClr.PRIMARY }}
+                cb={(thing: string) => console.log(thing)}
+            >
+                Listen
+            </Button>
+            <LinkBtn
+                url="https://www.google.com"
+                options={{ colour: BtnClr.PRIMARY }}
+            >
                 Google
             </LinkBtn>
         </>

@@ -6,14 +6,24 @@ export enum BtnClr {
     SECONDARY = "secondary",
     TERTIARY = "tertiary",
 }
-
+export interface BtnOpts {
+    colour?: BtnClr;
+    label?: string;
+}
 interface ButtonProps {
     children: React.ReactChild;
-    colour?: BtnClr;
+    options?: BtnOpts;
+    cb: Function;
 }
-const Button: React.FC<ButtonProps> = ({ children, colour }) => {
+const Button: React.FC<ButtonProps> = ({ children, options, cb }) => {
     return (
-        <button className={`${style.btn} ${colour && style[colour]}`}>
+        <button
+            className={`${style.btn} ${
+                options?.colour && style[options.colour]
+            }`}
+            aria-label={options?.label ? options.label : ""}
+            onClick={() => cb()}
+        >
             {children}
         </button>
     );

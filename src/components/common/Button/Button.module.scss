@@ -19,9 +19,9 @@
     &:hover {
         opacity: 0.8;
     }
-    &:focus {
+    /* &:focus {
         outline: var(--clr-off-white) 0.2rem solid;
-    }
+    } */
 
     &.primary {
         background-color: var(--clr-primary);
