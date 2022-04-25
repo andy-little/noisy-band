@@ -13,10 +13,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Hero />} />
             </Routes>
-            <Section colour={Colour.TERTIARY}>
-                <Socials data={socialAndContactIcons} />
-            </Section>
-            <Section colour={Colour.PRIMARY}>
+            <Section>
                 <h1>Cuckoo's Nest</h1>
                 <h2>Out Now!</h2>
                 <Quote author="the crazy coqs" colour={Colour.PRIMARY}>
@@ -35,6 +32,9 @@ const App = () => {
                 >
                     Google
                 </LinkBtn>
+            </Section>
+            <Section colour={Colour.TERTIARY}>
+                <Socials data={socialAndContactIcons} />
             </Section>
         </>
     );
