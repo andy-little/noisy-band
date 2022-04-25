@@ -2,7 +2,7 @@
     position: relative;
     background-image: url("../../../static/images/hero.jpg");
     background-size: cover;
-    /*  this doesn't work for mobile, need a fallback so it positions corectly    */
+    /*  this doesn't work for mobile, need a fallback so it positions correctly    */
     background-position: center;
     background-attachment: fixed;
     height: 90vh;
@@ -30,6 +30,6 @@
     OPTIMIZE LOGO
     */
     z-index: 100;
-    width: clamp(14rem, 28vw, 25rem);
+    width: clamp(14rem, 55vw, 25rem);
     margin-bottom: 2rem;
 }

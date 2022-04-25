@@ -1,3 +1,20 @@
+.container {
+    z-index: -100;
+    position: relative;
+    background-image: url("../../../static/images/about-bg.jpg");
+    background-size: cover;
+    /*  this doesn't work for mobile, need a fallback so it positions corectly    */
+    background-position: center;
+    &:after {
+        content: "";
+        z-index: -50;
+        position: absolute;
+        inset: 0;
+        opacity: 0.85;
+        background-color: var(--clr-bg);
+    }
+}
+
 .socials {
     border-top: solid var(--clr-primary) var(--section-border-thickness);
     svg {
@@ -5,9 +22,14 @@
     }
 }
 .icons {
-    margin: 0.8rem auto;
+    margin: 0 auto;
+    padding: 0.8rem 0;
     max-width: var(--max-width);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.bio {
+    max-width: var(--max-width);
+    max-width: var(--max-width-text);
 }

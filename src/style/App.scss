@@ -24,3 +24,6 @@ h6 {
 a {
     color: var(--clr-primary);
 }
+.section-padding {
+    padding: clamp(2rem, 8vw, 34rem) 0;
+}
