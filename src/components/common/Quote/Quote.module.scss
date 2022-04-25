@@ -1,0 +1,27 @@
+.container {
+    max-width: 30rem;
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
+}
+.quote {
+    display: inline;
+    vertical-align: sub;
+    line-height: 1;
+}
+.icon {
+    display: inline;
+    margin-right: 0.6rem;
+    &.primary {
+        color: var(--clr-primary);
+    }
+    &.secondary {
+        color: var(--clr-secondary);
+    }
+    &.tertiary {
+        color: var(--clr-tertiary);
+    }
+}
+.author {
+    text-transform: capitalize;
+    font-size: clamp(0.8rem, 3vw, 1.1rem);
+    margin-left: 0.4rem;
+}
