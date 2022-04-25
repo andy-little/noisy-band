@@ -1,0 +1,17 @@
+.content {
+    h1 {
+        color: var(--clr-off-white);
+    }
+    background-image: url("../../../static/images/bg.jpg");
+    background-repeat: repeat;
+}
+.banner {
+    //border-top: var(--clr-primary) solid var(--section-border-thickness);
+    max-width: 100%;
+}
+
+@media screen and (max-width: 35rem) {
+    .banner {
+        display: none;
+    }
+}
