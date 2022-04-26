@@ -3,13 +3,6 @@
     padding-left: 1em;
     padding-right: 1em;
 }
-.album {
-    display: block;
-    max-width: 28rem;
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .center_sm {
     max-width: fit-content;
@@ -33,7 +26,6 @@
         grid-row: 1/-1;
     }
 
-    .album,
     .center_sm {
         margin-left: 0;
         margin-right: 0;

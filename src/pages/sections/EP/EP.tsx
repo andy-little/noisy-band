@@ -12,7 +12,7 @@ const EP = () => {
                     <h1 className={style.h1}>Darker Than Blue</h1>
                     <h2>New EP Coming Soon!</h2>
                     <img
-                        className={style.album}
+                        className="album_art"
                         src={ep}
                         alt="darker than blue EP cover"
                     />

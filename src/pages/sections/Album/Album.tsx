@@ -10,7 +10,7 @@ const Album = () => {
                 <h1 className={style.right}>Cuckoo's Nest</h1>
                 <h2 className={style.right}>Available Now!</h2>
                 <img
-                    className={`${style.album} ${style.left}`}
+                    className={`album_art ${style.left}`}
                     src={cuckoo}
                     alt="cuckoo's nest album cover"
                 />
