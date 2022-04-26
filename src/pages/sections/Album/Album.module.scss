@@ -2,3 +2,48 @@
     max-width: 28rem;
     width: 70vw;
 }
+.page {
+    padding-left: 1em;
+    padding-right: 1em;
+    h1,
+    h2,
+    .album {
+        //position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1,
+    h2 {
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 55rem) {
+    .page {
+        max-width: 70rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        column-gap: 1.5rem;
+        h1,
+        h2 {
+            line-height: 1;
+            margin-bottom: 0;
+        }
+    }
+    .right {
+        grid-column: 2;
+        //align-self: center;
+    }
+    .left {
+        grid-column: 1;
+        grid-row: 1/-1;
+    }
+    h1,
+    h2,
+    .album {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
