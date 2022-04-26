@@ -7,12 +7,22 @@ interface QuoteProps {
     children: string;
     author: string;
     colour?: Colour;
+    className?: string;
 }
 
-const Quote: React.FC<QuoteProps> = ({ children, author, colour }) => {
+const Quote: React.FC<QuoteProps> = ({
+    children,
+    author,
+    colour,
+    className,
+}) => {
     return (
         <div className={style.container}>
-            <span className={`${style.icon} ${colour && style[colour]}`}>
+            <span
+                className={`${style.icon} ${
+                    colour && style[colour]
+                } ${className}`}
+            >
                 <FaQuoteLeft />
             </span>
             <p className={style.quote}>{children}</p>
