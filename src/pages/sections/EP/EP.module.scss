@@ -1,7 +1,24 @@
 .album {
     max-width: 28rem;
     width: 70vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.742);
 }
 .h1 {
     color: var(--clr-off-white);
+}
+.bg {
+    position: relative;
+    background-color: black;
+    background-color: #000a08;
+    z-index: -100;
+
+    &::after {
+        content: "";
+        background-image: url("../../../static/texture.png");
+        opacity: 0.3;
+        background-repeat: repeat;
+        position: absolute;
+        inset: 0;
+        z-index: -100;
+    }
 }
