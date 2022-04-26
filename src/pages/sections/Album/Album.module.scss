@@ -1,3 +1,4 @@
+@use "../../../style/mixins" as mixin;
 .page {
     padding-left: 1em;
     padding-right: 1em;
@@ -16,23 +17,13 @@
     margin-right: auto;
 }
 
-h1,
-h2 {
-    text-align: center;
-}
-
-@media screen and (min-width: 55rem) {
+@include mixin.desktop {
     .page {
         max-width: 70rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto;
         column-gap: 1.5rem;
-        h1,
-        h2 {
-            line-height: 1;
-            margin-bottom: 0;
-        }
     }
     .right {
         grid-column: 2;
@@ -42,10 +33,6 @@ h2 {
         grid-row: 1/-1;
     }
 
-    h1,
-    h2 {
-        text-align: left;
-    }
     .album,
     .center_sm {
         margin-left: 0;
