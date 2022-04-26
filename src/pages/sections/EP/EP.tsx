@@ -8,7 +8,7 @@ const EP = () => {
     return (
         <Section>
             <div className="section-padding">
-                <h1>Darker Than Blue</h1>
+                <h1 className={style.h1}>Darker Than Blue</h1>
                 <h2>New EP Coming Soon!</h2>
                 <img
                     className={style.album}

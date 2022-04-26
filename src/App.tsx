@@ -1,11 +1,6 @@
 import "./style/App.scss";
 import { Routes, Route } from "react-router-dom";
-import { Quote, Socials } from "./components/common";
-import { socialAndContactIcons } from "./constants/SocialIcons";
-import { Button, LinkBtn } from "./components/common";
-import Colour from "./constants/Colour";
-import { Section } from "./components/common";
-import { Home } from "./pages/sections";
+import { Footer, Home } from "./pages/sections";
 
 const App = () => {
     return (
@@ -13,6 +8,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
             </Routes>
+            <Footer />
         </>
     );
 };
