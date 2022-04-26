@@ -3,5 +3,9 @@
     color: var(--clr-bg);
     svg {
         color: var(--clr-bg);
+        font-size: clamp(1rem, 7vw, 1.7rem);
     }
+}
+.logo {
+    max-width: clamp(5rem, 10vw, 8rem);
 }
