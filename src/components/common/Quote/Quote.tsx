@@ -17,11 +17,17 @@ const Quote: React.FC<QuoteProps> = ({
     className,
 }) => {
     return (
-        <div className={style.container}>
+        <div
+            className={`
+            ${style.container}
+            ${className}
+            `}
+        >
             <span
-                className={`${style.icon} ${
-                    colour && style[colour]
-                } ${className}`}
+                className={`
+                ${style.icon} 
+                ${colour && style[colour]} 
+                `}
             >
                 <FaQuoteLeft />
             </span>

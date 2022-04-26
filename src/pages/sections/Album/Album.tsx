@@ -14,12 +14,8 @@ const Album = () => {
                     src={cuckoo}
                     alt="cuckoo's nest album cover"
                 />
-                <div className={style.center_sm}>
-                    <Quote
-                        className={`${style.right}`}
-                        author="the crazy coqs"
-                        colour={Colour.PRIMARY}
-                    >
+                <div>
+                    <Quote author="the crazy coqs" colour={Colour.PRIMARY}>
                         Fat, greasy, stinking funk, wrapped up in Andy Little's
                         mellifluous arrangements, served up by London's finest.
                     </Quote>

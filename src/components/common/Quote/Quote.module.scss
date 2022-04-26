@@ -1,6 +1,9 @@
+@use "../../../style/mixins" as mixin;
 .container {
-    max-width: 30rem;
+    max-width: var(--max-width-text);
     font-size: clamp(1rem, 3.5vw, 1.4rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 .quote {
     display: inline;
@@ -27,4 +30,10 @@
     text-transform: capitalize;
     font-size: clamp(0.8rem, 3vw, 1.1rem);
     margin-left: 0.4rem;
+}
+@include mixin.desktop {
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
