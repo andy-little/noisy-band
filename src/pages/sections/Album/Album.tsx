@@ -20,14 +20,12 @@ const Album = () => {
                     mellifluous arrangements, served up by London's finest.
                 </Quote>
 
-                <div>
-                    <LinkBtn
-                        url="https://www.google.com"
-                        options={{ colour: Colour.PRIMARY }}
-                    >
-                        Listen
-                    </LinkBtn>
-                </div>
+                <LinkBtn
+                    url="https://www.google.com"
+                    options={{ colour: Colour.PRIMARY }}
+                >
+                    Listen
+                </LinkBtn>
             </div>
         </Section>
     );
