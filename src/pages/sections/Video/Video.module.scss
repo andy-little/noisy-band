@@ -36,11 +36,11 @@
 
 @include mixin.desktop {
     .page {
-        max-width: 70rem;
+        max-width: var(--max-width-grid);
         display: grid;
+        column-gap: var(--column-gap);
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
-        column-gap: 1.5rem;
     }
     .video_link {
         grid-column: 2;
