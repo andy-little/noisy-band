@@ -1,11 +1,63 @@
+@use "../../../style/mixins.scss" as mixin;
 .footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--clr-off-white);
     color: var(--clr-bg);
-    svg {
-        color: var(--clr-bg);
-        font-size: clamp(1rem, 7vw, 1.7rem);
-    }
+    padding: 1rem;
 }
 .logo {
     max-width: clamp(5rem, 10vw, 8rem);
+    display: none;
+}
+.copyright {
+    order: 2;
+    p {
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
+        margin: 0 0 0.2em 0;
+    }
+    p:last-child {
+        margin: 0;
+    }
+}
+
+.socials {
+    order: 1;
+    a {
+        color: var(--clr-bg);
+        font-size: clamp(1rem, 7vw, 1.7rem);
+        margin-left: 1em;
+    }
+    a:first-child {
+        margin-left: 0;
+    }
+    a:nth-child(4) {
+        margin-left: 0;
+    }
+    a:nth-child(3):after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+@media only screen and (min-width: 20rem) {
+    .footer {
+        flex-direction: row;
+    }
+    .copyright {
+        order: 1;
+    }
+    .logo {
+        order: 2;
+    }
+    .socials {
+        order: 3;
+    }
+}
+@media only screen and (min-width: 35rem) {
+    .logo {
+        display: block;
+    }
 }
