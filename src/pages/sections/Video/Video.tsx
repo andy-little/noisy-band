@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 const Video = () => {
     return (
         <Section>
-            <div className={`section-padding ${style.page}`}>
+            <div className={`section-padding center-section ${style.page}`}>
                 <h1>Video</h1>
 
                 <a

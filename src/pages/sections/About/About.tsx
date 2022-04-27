@@ -7,7 +7,9 @@ const About = () => {
     return (
         <Section colour={Colour.PRIMARY}>
             <div className={style.container}>
-                <div className={`section-padding ${style.content}`}>
+                <div
+                    className={`section-padding center-section ${style.content}`}
+                >
                     <h1>About</h1>
                     <section className={style.bio}>
                         <p>

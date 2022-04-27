@@ -8,7 +8,7 @@ const EP = () => {
     return (
         <Section>
             <div className={style.bg}>
-                <div className="section-padding">
+                <div className="section-padding center-section ">
                     <h1 className={style.h1}>Darker Than Blue</h1>
                     <h2>New EP Coming Soon!</h2>
                     <img

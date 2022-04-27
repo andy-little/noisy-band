@@ -17,9 +17,10 @@
     .right {
         grid-column: 2;
     }
+
     .left {
+        grid-row: 1 / -1;
         grid-column: 1;
-        grid-row: 1/-1;
     }
 
     .center_sm {
