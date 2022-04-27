@@ -7,14 +7,11 @@ import { FaYoutube } from "react-icons/fa";
 const Video = () => {
     return (
         <Section>
-            <div className="section-padding">
-                <h1 className={style.h1}>Video</h1>
-                <Quote colour={Colour.TERTIARY} author="RSB Records">
-                    Andy Little takes us on a journey which straddles musical
-                    mountain peaks, valleys, deserts and the seas.
-                </Quote>
+            <div className={`section-padding ${style.page}`}>
+                <h1>Video</h1>
 
                 <a
+                    className={style.video_link}
                     href="https://www.youtube.com/c/mrlittleofficial"
                     target="_blank"
                     rel="noreferrer"
@@ -28,7 +25,12 @@ const Video = () => {
                         />
                     </div>
                 </a>
+                <Quote colour={Colour.TERTIARY} author="RSB Records">
+                    Andy Little takes us on a journey which straddles musical
+                    mountain peaks, valleys, deserts and the seas.
+                </Quote>
                 <LinkBtn
+                    className={style.button}
                     url="https://www.youtube.com/c/mrlittleofficial"
                     options={{ colour: Colour.TERTIARY }}
                 >
