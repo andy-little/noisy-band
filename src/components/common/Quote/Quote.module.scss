@@ -4,12 +4,10 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 .quote {
-    display: inline;
     font-size: clamp(1.2rem, 3.8vw, 1.45rem);
-    vertical-align: sub;
-    line-height: 1;
 }
 .icon {
     display: inline;
@@ -36,5 +34,6 @@
     .container {
         margin-left: 0;
         margin-right: 0;
+        text-align: left;
     }
 }

@@ -23,15 +23,17 @@ const Quote: React.FC<QuoteProps> = ({
             ${className}
             `}
         >
-            <span
-                className={`
+            <p className={style.quote}>
+                <span
+                    className={`
                 ${style.icon} 
                 ${colour && style[colour]} 
                 `}
-            >
-                <FaQuoteLeft />
-            </span>
-            <p className={style.quote}>{children}</p>
+                >
+                    <FaQuoteLeft />
+                </span>
+                {children}
+            </p>
             <p className={style.author}> - {author}</p>
         </div>
     );
