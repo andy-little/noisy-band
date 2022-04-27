@@ -14,15 +14,14 @@ const Album = () => {
                     src={cuckoo}
                     alt="cuckoo's nest album cover"
                 />
-                <div>
-                    <Quote author="the crazy coqs" colour={Colour.PRIMARY}>
-                        Fat, greasy, stinking funk, wrapped up in Andy Little's
-                        mellifluous arrangements, served up by London's finest.
-                    </Quote>
-                </div>
+
+                <Quote author="the crazy coqs" colour={Colour.PRIMARY}>
+                    Fat, greasy, stinking funk, wrapped up in Andy Little's
+                    mellifluous arrangements, served up by London's finest.
+                </Quote>
+
                 <div>
                     <LinkBtn
-                        className={`${style.right} ${style.center_sm}`}
                         url="https://www.google.com"
                         options={{ colour: Colour.PRIMARY }}
                     >
