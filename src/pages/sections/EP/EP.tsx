@@ -8,15 +8,16 @@ const EP = () => {
     return (
         <Section>
             <div className={style.bg}>
-                <div className="section-padding center-section ">
-                    <h1 className={style.h1}>Darker Than Blue</h1>
+                <div className={`section-padding center-section ${style.page}`}>
+                    <h1>Darker Than Blue</h1>
                     <h2>New EP Coming Soon!</h2>
                     <img
-                        className="album_art"
+                        className={`album_art ${style.album}`}
                         src={ep}
                         alt="darker than blue EP cover"
                     />
                     <Quote
+                        className={style.quote}
                         author="shades of soul LTD"
                         colour={Colour.OFF_WHITE}
                     >

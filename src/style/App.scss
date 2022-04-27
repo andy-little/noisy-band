@@ -23,13 +23,12 @@ h2 {
 }
 p {
     font-size: clamp(0.9rem, 3vw, 1.15rem);
-    //font-weight: 100;
 }
 a {
     color: var(--clr-primary);
 }
 .section-padding {
-    padding: clamp(2rem, 7vw, 3.4rem) 1rem;
+    padding: clamp(2rem, 9vw, 6rem) 1rem;
 }
 
 .album_art {

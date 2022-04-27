@@ -1,5 +1,9 @@
-.h1 {
-    color: var(--clr-off-white);
+@use "../../../style/mixins" as mixin;
+
+.page {
+    h1 {
+        color: var(--clr-off-white);
+    }
 }
 .bg {
     position: relative;
@@ -15,5 +19,25 @@
         position: absolute;
         inset: 0;
         z-index: -100;
+    }
+}
+
+@include mixin.desktop {
+    .page {
+        max-width: var(--max-width-grid);
+        display: grid;
+        column-gap: var(--column-gap);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4.5rem 3rem auto;
+        h1,
+        h2,
+        .quote {
+            grid-column: 1;
+        }
+    }
+
+    .album {
+        grid-column: 2;
+        grid-row: 1/-1;
     }
 }
