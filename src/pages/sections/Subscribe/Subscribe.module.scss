@@ -1,3 +1,5 @@
+@use "../../../style/mixins.scss" as mixin;
+
 .content {
     position: relative;
     display: flex;
@@ -5,6 +7,7 @@
     flex-direction: column;
     h1 {
         color: var(--clr-off-white);
+        margin-bottom: 1.4rem;
     }
     background-image: url("../../../static/images/bg.jpg");
     background-repeat: repeat;
@@ -16,7 +19,6 @@
         max-width: 22rem;
         background-color: white; //var(--clr-off-white);
         border: none;
-        //border-radius: 0.5rem;
         margin-bottom: 1rem;
         font-family: "archivo narrow", sans-serif;
         letter-spacing: 0.15em;
@@ -25,12 +27,12 @@
     }
 }
 .banner {
-    //border-top: var(--clr-primary) solid var(--section-border-thickness);
+    display: none;
     max-width: 100%;
 }
 
-@media screen and (max-width: 35rem) {
+@include mixin.desktop {
     .banner {
-        display: none;
+        display: block;
     }
 }

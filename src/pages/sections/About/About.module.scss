@@ -44,7 +44,18 @@
 }
 
 @include mixin.desktop {
+    .content {
+        max-width: 70rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        //grid-template-rows: auto auto auto auto;
+        column-gap: 1.5rem;
+        h1 {
+            grid-column: 1;
+        }
+    }
     .bio {
+        grid-column: 1;
         margin-left: 0;
         margin-right: 0;
     }
