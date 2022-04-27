@@ -15,12 +15,15 @@ h2 {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
 }
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
+    text-align: center;
+    line-height: 1;
     margin-top: 0;
+    margin-bottom: 1.4rem;
+}
+p {
+    font-size: clamp(0.9rem, 3vw, 1.15rem);
+    //font-weight: 100;
 }
 a {
     color: var(--clr-primary);
@@ -29,12 +32,6 @@ a {
     padding: clamp(2rem, 7vw, 3.4rem) 1rem;
 }
 
-h1,
-h2 {
-    text-align: center;
-    line-height: 1;
-    margin-bottom: 1.4rem;
-}
 .album_art {
     display: block;
     max-width: 28rem;

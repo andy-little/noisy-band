@@ -2,12 +2,12 @@
 .container {
     max-width: var(--max-width-text);
     width: fit-content;
-    font-size: clamp(1.2rem, 3.8vw, 1.45rem);
     margin-left: auto;
     margin-right: auto;
 }
 .quote {
     display: inline;
+    font-size: clamp(1.2rem, 3.8vw, 1.45rem);
     vertical-align: sub;
     line-height: 1;
 }
