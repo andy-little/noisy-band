@@ -1,3 +1,5 @@
+@use "../../../style/mixins.scss" as mixin;
+
 .container {
     position: relative;
     background-image: url("../../../static/images/about-bg.jpg");
@@ -38,4 +40,12 @@
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     letter-spacing: normal;
+    margin: 0 auto;
+}
+
+@include mixin.desktop {
+    .bio {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
