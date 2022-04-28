@@ -21,7 +21,7 @@ const Album = () => {
                 </Quote>
 
                 <LinkBtn
-                    url="https://www.google.com"
+                    url="https://open.spotify.com/artist/4hZ0YIg9waQoLrqq1DCUH9?si=cr6XhyfYSjqlcsA5YHD5nA"
                     options={{ colour: Colour.PRIMARY }}
                 >
                     Listen
