@@ -6,7 +6,8 @@
 }
 
 .video {
-    max-width: 100%;
+    width: 100%;
+    max-width: 35rem;
     border: var(--section-border-thickness) var(--clr-tertiary) solid;
     border-radius: 0.8rem;
     margin-bottom: 1rem;
