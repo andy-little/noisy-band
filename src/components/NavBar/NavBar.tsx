@@ -6,14 +6,16 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <nav className={style.nav_container}>
-            <div className={style.nav_items}>
-                {navItems.map(({ url, name, id }) => {
-                    return (
-                        <Link className={style.link} to={url} key={id}>
-                            {name}
-                        </Link>
-                    );
-                })}
+            <div className={`${style.clip}`}>
+                <div className={style.nav_items}>
+                    {navItems.map(({ url, name, id }) => {
+                        return (
+                            <Link className={style.link} to={url} key={id}>
+                                {name}
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
         </nav>
     );
