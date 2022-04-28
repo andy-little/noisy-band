@@ -5,7 +5,7 @@ import logo from "../../../static/logo.png";
 
 const Footer = () => {
     return (
-        <div className={` ${style.footer}`}>
+        <div className={`${style.footer}`}>
             <div className={style.copyright}>
                 <p>Copyright © 2022 Andy Little</p>
                 <p>All Rights Reserved</p>
