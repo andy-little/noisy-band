@@ -9,7 +9,7 @@ const Footer = () => {
             <div className={style.copyright}>
                 <p>Copyright © 2022 Andy Little</p>
                 <p>All Rights Reserved</p>
-                <p> Site By Andy Little</p>
+                {/*  <p> Site By Andy Little</p> */}
             </div>
             <img className={style.logo} src={logo} alt="noisy band logo" />
             <div className={style.socials}>

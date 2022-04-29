@@ -1,6 +1,6 @@
 .nav_container {
-    //position: fixed;
-    position: absolute;
+    position: fixed;
+
     display: block;
     top: 0;
     left: 0;
@@ -36,9 +36,21 @@
         color: var(--clr-tertiary);
     }
 }
+.hamburger {
+    display: block;
+    color: var(--clr-primary);
+    font-size: 2rem;
+    margin: 0 3rem 0 auto;
+}
 
 @media screen and (min-width: 33rem) {
+    .nav_container {
+        position: absolute;
+    }
     .nav_items {
         display: flex;
+    }
+    .hamburger {
+        display: none;
     }
 }

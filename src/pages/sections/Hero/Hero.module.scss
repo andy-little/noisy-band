@@ -6,10 +6,12 @@
     background-position: center;
     background-attachment: fixed;
     height: 90vh;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
     &:after {
         content: "";
         position: absolute;
@@ -31,5 +33,6 @@
     */
     z-index: 100;
     width: clamp(14rem, 55vw, 25rem);
+    max-width: 50vh;
     margin-bottom: 2rem;
 }
