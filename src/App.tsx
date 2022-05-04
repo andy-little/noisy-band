@@ -1,9 +1,9 @@
 import "./style/App.scss";
 import { Routes, Route } from "react-router-dom";
-import { Footer, Home } from "./pages/sections";
+import { UnderConstruction, Home } from "./pages";
+import { Footer } from "./pages/sections";
 import { NavBar } from "./components";
 import { useEffect, useState } from "react";
-import { UnderConstruction } from "./pages";
 
 import Location from "./constants/Location";
 
