@@ -1,4 +1,8 @@
 @use "./mixins.scss" as mixin;
+
+main {
+    margin-top: 4rem;
+}
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
@@ -42,7 +46,10 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
-
+.page {
+    // might need to be dynamic
+    margin-top: 7.5rem;
+}
 @include mixin.desktop {
     h1,
     h2 {
