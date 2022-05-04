@@ -6,7 +6,7 @@ import { socialIcons } from "../../../constants/SocialIcons";
 const About = () => {
     return (
         <Section colour={Colour.PRIMARY}>
-            <div className={style.container}>
+            <div className={style.container} id="about">
                 <div
                     className={`section-padding center-section ${style.content}`}
                 >
