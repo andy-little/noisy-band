@@ -5,6 +5,7 @@ import "./style/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { NavProvider } from "./contexts/navContext";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            <NavProvider>
+                <App />
+            </NavProvider>
         </BrowserRouter>
     </React.StrictMode>
 );

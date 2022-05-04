@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import Location from "../constants/Location";
 
 interface ContextInterface {
@@ -7,9 +7,19 @@ interface ContextInterface {
 }
 const NavCtx = createContext<ContextInterface | null>(null);
 
-export const Provider = () => {
+interface NavProvProps {
+    children: React.ReactNode;
+}
+
+export const NavProvider: React.FC<NavProvProps> = ({ children }) => {
     const [location, setLocation] = useState(Location.TOP);
     return (
-        <NavCtx.Provider value={{ location, setLocation }}></NavCtx.Provider>
+        <NavCtx.Provider value={{ location, setLocation }}>
+            {children}
+        </NavCtx.Provider>
     );
+};
+
+export const useNavCtx = () => {
+    return useContext(NavCtx);
 };
