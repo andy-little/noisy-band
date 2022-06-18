@@ -3,23 +3,19 @@ import { Routes, Route } from "react-router-dom";
 import { Footer } from "./pages/sections";
 import { UnderConstruction, Home } from "./pages";
 import { NavBar } from "./components";
-import { useEffect, useState } from "react";
+//import { useEffect } from "react";
 
-import Location from "./constants/Location";
+import { useNavCtx } from "./contexts/navContext";
 
 const App = () => {
-    const [location, setLocation] = useState(Location.TOP);
-
-    useEffect(() => {
-        console.log(location);
-    }, [location]);
+    const { location, setLocation } = useNavCtx();
 
     return (
         <>
             <NavBar cb={setLocation} />
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home location={location} />} />
                     <Route path="/shop" element={<UnderConstruction />} />
                 </Routes>
             </main>

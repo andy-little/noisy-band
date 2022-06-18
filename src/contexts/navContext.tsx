@@ -5,7 +5,10 @@ interface ContextInterface {
     location: Location;
     setLocation: (value: Location) => void;
 }
-const NavCtx = createContext<ContextInterface | null>(null);
+const NavCtx = createContext<ContextInterface>({
+    location: 0,
+    setLocation: () => {},
+});
 
 interface NavProvProps {
     children: React.ReactNode;
