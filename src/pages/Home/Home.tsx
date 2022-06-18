@@ -6,32 +6,32 @@ interface HomeProps {
   location: Location;
 }
 const Home: React.FC<HomeProps> = ({ location }) => {
+  const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
 
   const refsMap = useMemo(
     () => ({
+      [Location.TOP]: heroRef,
       [Location.ABOUT]: aboutRef,
       [Location.VIDEO]: videoRef,
-      [Location.TOP]: { current: 0 },
     }),
     []
   );
 
   useEffect(() => {
     const goTo = refsMap[location];
-    if (goTo.current !== 0) {
-      console.log(goTo.current);
+    //console.log(goTo?.current?.getBoundingClientRect());
+    if (location !== Location.TOP && goTo.current) {
+      window.scrollTo(0, goTo.current.getBoundingClientRect().y);
     }
-    // object with Location as key and either ref or location of ref as value
-    // doe something like this below
-
-    // setScrollHeight(refsMap[location].current.height)
   }, [location, refsMap]);
 
   return (
     <>
-      <Hero />
+      <div ref={heroRef}>
+        <Hero />
+      </div>
       <Album />
       <div ref={aboutRef}>
         <About />
