@@ -4,8 +4,9 @@ import Location from '../../constants/Location';
 
 interface HomeProps {
   location: Location;
+  changes: number;
 }
-const Home: React.FC<HomeProps> = ({ location }) => {
+const Home: React.FC<HomeProps> = ({ location, changes }) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLDivElement>(null);
@@ -21,11 +22,10 @@ const Home: React.FC<HomeProps> = ({ location }) => {
 
   useEffect(() => {
     const goTo = refsMap[location];
-    //console.log(goTo?.current?.getBoundingClientRect());
     if (location !== Location.TOP && goTo.current) {
       window.scrollTo(0, goTo.current.getBoundingClientRect().y);
     }
-  }, [location, refsMap]);
+  }, [location, changes, refsMap]);
 
   return (
     <>

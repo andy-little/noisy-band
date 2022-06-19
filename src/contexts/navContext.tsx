@@ -1,28 +1,34 @@
-import React, { createContext, useContext, useState } from "react";
-import Location from "../constants/Location";
+import React, { createContext, useContext, useState } from 'react';
+import Location from '../constants/Location';
 
 interface ContextInterface {
-    location: Location;
-    setLocation: (value: Location) => void;
+  location: { location: Location; changes: number };
+  setLocation: (value: any) => void;
 }
 const NavCtx = createContext<ContextInterface>({
-    location: 0,
-    setLocation: () => {},
+  location: { location: Location.TOP, changes: 0 },
+  setLocation: () => {},
 });
 
 interface NavProvProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const NavProvider: React.FC<NavProvProps> = ({ children }) => {
-    const [location, setLocation] = useState(Location.TOP);
-    return (
-        <NavCtx.Provider value={{ location, setLocation }}>
-            {children}
-        </NavCtx.Provider>
-    );
+  const [location, setLocation] = useState<{
+    location: Location;
+    changes: number;
+  }>({
+    location: Location.TOP,
+    changes: 0,
+  });
+  return (
+    <NavCtx.Provider value={{ location, setLocation }}>
+      {children}
+    </NavCtx.Provider>
+  );
 };
 
 export const useNavCtx = () => {
-    return useContext(NavCtx);
+  return useContext(NavCtx);
 };
