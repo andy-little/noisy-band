@@ -6,6 +6,7 @@ interface HomeProps {
   location: Location;
   changes: number;
 }
+
 const Home: React.FC<HomeProps> = ({ location, changes }) => {
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -13,19 +14,29 @@ const Home: React.FC<HomeProps> = ({ location, changes }) => {
 
   const refsMap = useMemo(
     () => ({
-      [Location.TOP]: heroRef,
+      [Location.HOME]: heroRef,
       [Location.ABOUT]: aboutRef,
       [Location.VIDEO]: videoRef,
     }),
     []
   );
 
-  useEffect(() => {
-    const goTo = refsMap[location];
-    if (location !== Location.TOP && goTo.current) {
-      window.scrollTo(0, goTo.current.getBoundingClientRect().y);
+  const scrollToDestination = () => {
+    if (location !== Location.NONE) {
+      const selectedElement = refsMap[location].current;
+      console.log(selectedElement);
+
+      if (location !== Location.HOME && selectedElement) {
+        console.log(selectedElement.getBoundingClientRect());
+        window.scrollTo(0, selectedElement.getBoundingClientRect().y);
+      }
     }
-  }, [location, changes, refsMap]);
+  };
+  useEffect(() => {
+    // needs to run scroll to function when page loads to
+    // why isn't it, I think it works but because the page hasn't mounted the vaules are 0?
+    scrollToDestination();
+  }, [changes]);
 
   return (
     <>

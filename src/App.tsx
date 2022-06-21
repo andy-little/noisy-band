@@ -4,6 +4,7 @@ import { Footer } from './pages/sections';
 import { UnderConstruction, Home } from './pages';
 import { NavBar } from './components';
 import Location from './constants/Location';
+import { locationState } from './interfaces/locationState';
 //import { useEffect } from "react";
 
 import { useNavCtx } from './contexts/navContext';
@@ -11,8 +12,12 @@ import { useNavCtx } from './contexts/navContext';
 const App = () => {
   const { location, setLocation } = useNavCtx();
   const navCb = (value: Location) => {
-    setLocation((prevLoc: { location: Location; changes: number }) => {
-      return { location: value, changes: prevLoc.changes + 1 };
+    setLocation((prevLoc: locationState) => {
+      return {
+        location: value,
+        changes:
+          value === Location.NONE ? prevLoc.changes : prevLoc.changes + 1,
+      };
     });
   };
 
