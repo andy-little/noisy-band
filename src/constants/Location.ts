@@ -1,8 +1,7 @@
 enum Location {
-  HOME,
+  TOP,
   ABOUT,
   VIDEO,
-  NONE,
 }
 
 export default Location;

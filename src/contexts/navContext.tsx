@@ -7,7 +7,7 @@ interface ContextInterface {
   setLocation: (value: any) => void;
 }
 const NavCtx = createContext<ContextInterface>({
-  location: { location: Location.HOME, changes: 0 },
+  location: { location: Location.TOP, changes: 0 },
   setLocation: () => {},
 });
 
@@ -17,7 +17,7 @@ interface NavProvProps {
 
 export const NavProvider: React.FC<NavProvProps> = ({ children }) => {
   const [location, setLocation] = useState<locationState>({
-    location: Location.HOME,
+    location: Location.TOP,
     changes: 0,
   });
   return (
