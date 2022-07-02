@@ -6,14 +6,23 @@ import { HashLink } from 'react-router-hash-link';
 import { RiMenu5Fill } from 'react-icons/ri';
 import Location from '../../constants/Location';
 
-const NavBarItems: React.FC = () => {
+interface NavBarItemsProps {
+  cb?: () => void;
+}
+
+const NavBarItems: React.FC<NavBarItemsProps> = ({ cb }) => {
   return (
     <>
       {navItems.map(({ url, name, id, location }) => {
         const hasID = location !== Location.TOP;
         const Component = hasID ? HashLink : Link;
         return (
-          <Component className={style.link} to={url} key={id}>
+          <Component
+            className={style.link}
+            to={url}
+            key={id}
+            onClick={cb ? cb : () => {}}
+          >
             {name}
           </Component>
         );
@@ -24,15 +33,17 @@ const NavBarItems: React.FC = () => {
 
 const NavBar: React.FC = () => {
   const [isMobNavOpen, setIsMobNavOpen] = useState(false);
+  const toggleMobNav = () => {
+    setIsMobNavOpen(!isMobNavOpen);
+  };
 
   return (
     <nav className={style.nav_container}>
       <div className={`${style.clip}`}>
-        <RiMenu5Fill
-          className={style.hamburger}
-          onClick={() => setIsMobNavOpen(!isMobNavOpen)}
-        />
-        <div className={style.mob_nav}>{isMobNavOpen && <NavBarItems />}</div>
+        <RiMenu5Fill className={style.hamburger} onClick={toggleMobNav} />
+        <div className={style.mob_nav}>
+          {isMobNavOpen && <NavBarItems cb={toggleMobNav} />}
+        </div>
         <div className={style.nav_items}>
           <NavBarItems />
         </div>
