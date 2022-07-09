@@ -1,5 +1,6 @@
 enum Location {
   TOP,
+  HOME,
   ABOUT,
   VIDEO,
 }

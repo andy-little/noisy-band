@@ -1,62 +1,62 @@
-@use "./mixins.scss" as mixin;
+@use './mixins.scss' as mixin;
 
 main {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 body {
-    background-color: var(--clr-bg);
-    color: var(--clr-txt);
-    font-family: "Archivo Narrow", sans-serif;
-    line-height: 1.6;
+  background-color: var(--clr-bg);
+  color: var(--clr-txt);
+  font-family: 'Archivo Narrow', sans-serif;
+  line-height: 1.6;
 }
 h1 {
-    font-family: "market-deco", "Archivo Narrow";
-    color: var(--clr-primary);
-    font-size: clamp(1.5rem, 7vw, 2.5rem);
+  font-family: 'market-deco', 'Archivo Narrow';
+  color: var(--clr-primary);
+  font-size: clamp(1.5rem, 7vw, 2.5rem);
 }
 h2 {
-    font-weight: normal;
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  font-weight: normal;
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
 }
 h1,
 h2 {
-    text-align: center;
-    line-height: 1;
-    margin-top: 0;
-    margin-bottom: 1.4rem;
+  text-align: center;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 1.4rem;
 }
 p {
-    font-size: clamp(0.9rem, 3vw, 1.15rem);
+  font-size: clamp(0.9rem, 3vw, 1.15rem);
 }
 a {
-    color: var(--clr-primary);
+  color: var(--clr-primary);
 }
 .section-padding {
-    padding: clamp(2rem, 9vw, 6rem) 1rem;
+  padding: clamp(2rem, 9vw, 6rem) 1rem;
 }
 
 .album_art {
-    display: block;
-    max-width: 28rem;
-    width: 70vw;
-    margin: 0 auto 1rem auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.742);
+  display: block;
+  max-width: 28rem;
+  width: 70vw;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.742);
 }
 .center-section {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .page {
-    // might need to be dynamic
-    margin-top: 7.5rem;
+  // might need to be dynamic
+  margin-top: 7.5rem;
 }
 @include mixin.desktop {
-    h1,
-    h2 {
-        text-align: left;
-        margin-bottom: 0;
-    }
-    .album_art {
-        margin: 0;
-    }
+  h1,
+  h2 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .album_art {
+    margin: 0;
+  }
 }
