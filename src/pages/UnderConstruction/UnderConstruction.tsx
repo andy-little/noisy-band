@@ -6,9 +6,10 @@ import Colour from '../../constants/Colour';
 const UnderConstruction = () => {
   return (
     <div className={`page ${style.container}`}>
-      <h1 className={style.h1}>Page Unavailable</h1>
+      <h1 className={style.h1}>Under Construction</h1>
       <p className={style.p}>
-        This page is currently under construction. Please check back again soon!
+        This page is currently unavailable.
+        <br /> Please check back again soon!
       </p>
       <LinkBtn
         className={style.link}
