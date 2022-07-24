@@ -7,12 +7,12 @@ import { NavBar } from './components';
 const App = () => {
   return (
     <>
-      <i id="home" />
       <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<UnderConstruction />} />
+          <Route path="/contact" element={<UnderConstruction />} />
         </Routes>
       </main>
       <Footer />
