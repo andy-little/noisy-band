@@ -15,25 +15,33 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({ cb, offset = 0 }) => {
   return (
     <>
       {navItems.map(({ url, name, id, location }) => {
-        const hasID = location !== Location.TOP;
-        const Component = hasID ? HashLink : Link;
+        if (location !== Location.NONE) {
+          const hasID = location !== Location.TOP;
+          const Component = hasID ? HashLink : Link;
 
-        return (
-          <Component
-            className={style.link}
-            to={url}
-            key={id}
-            onClick={cb ? () => cb() : () => {}}
-            scroll={(el) => {
-              if (offset) {
-                el.scrollIntoView();
-                window.scrollBy(0, offset);
-              }
-            }}
-          >
-            {name}
-          </Component>
-        );
+          return (
+            <Component
+              className={style.link}
+              to={url}
+              key={id}
+              onClick={cb ? () => cb() : () => {}}
+              scroll={(el) => {
+                if (offset) {
+                  el.scrollIntoView();
+                  window.scrollBy(0, offset);
+                }
+              }}
+            >
+              {name}
+            </Component>
+          );
+        } else {
+          return (
+            <a className={style.link} href={url}>
+              {name}
+            </a>
+          );
+        }
       })}
     </>
   );
