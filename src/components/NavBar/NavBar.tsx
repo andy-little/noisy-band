@@ -8,10 +8,10 @@ import Location from '../../constants/Location';
 
 interface NavBarItemsProps {
   cb?: () => void;
-  offset?: boolean;
+  offset?: number;
 }
 
-const NavBarItems: React.FC<NavBarItemsProps> = ({ cb, offset = false }) => {
+const NavBarItems: React.FC<NavBarItemsProps> = ({ cb, offset = 0 }) => {
   return (
     <>
       {navItems.map(({ url, name, id, location }) => {
@@ -20,7 +20,6 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({ cb, offset = false }) => {
 
         return (
           <Component
-            data-type={JSON.stringify(Component, null, 2)}
             className={style.link}
             to={url}
             key={id}
@@ -28,9 +27,7 @@ const NavBarItems: React.FC<NavBarItemsProps> = ({ cb, offset = false }) => {
             scroll={(el) => {
               if (offset) {
                 el.scrollIntoView();
-                window.scrollBy(0, -80);
-              } else {
-                el.scrollIntoView({ behavior: 'smooth' });
+                window.scrollBy(0, offset);
               }
             }}
           >
@@ -53,10 +50,10 @@ const NavBar: React.FC = () => {
       <div className={`${style.clip}`}>
         <RiMenu5Fill className={style.hamburger} onClick={toggleMobNav} />
         <div className={style.mob_nav}>
-          {isMobNavOpen && <NavBarItems cb={toggleMobNav} offset={true} />}
+          {isMobNavOpen && <NavBarItems cb={toggleMobNav} offset={-80} />}
         </div>
         <div className={style.nav_items}>
-          <NavBarItems />
+          <NavBarItems offset={-84} />
         </div>
       </div>
     </nav>

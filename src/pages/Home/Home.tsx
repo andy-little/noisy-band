@@ -3,16 +3,10 @@ import { Album, Hero, About, Video, Subscribe, EP } from '../sections';
 const Home: React.FC = () => {
   return (
     <>
-      <div>
-        <Hero />
-      </div>
+      <Hero />
       <Album />
-      <div>
-        <About />
-      </div>
-      <div>
-        <Video />
-      </div>
+      <About />
+      <Video />
       <Subscribe />
       <EP />
     </>
