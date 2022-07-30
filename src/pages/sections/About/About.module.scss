@@ -1,61 +1,61 @@
-@use "../../../style/mixins.scss" as mixin;
+@use '../../../style/mixins.scss' as mixin;
 
 .container {
-    position: relative;
-    background-image: url("../../../static/images/about-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    &:after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        opacity: 0.85;
-        background-color: var(--clr-bg);
-        pointer-events: none;
-    }
+  position: relative;
+  background-image: url('../../../static/images/about-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.85;
+    background-color: var(--clr-bg);
+    pointer-events: none;
+  }
 }
 .content {
-    position: relative;
-    z-index: 100;
+  position: relative;
+  z-index: 100;
 }
 .socials {
-    position: relative;
-    z-index: 100;
-    border-top: solid var(--clr-primary) var(--section-border-thickness);
-    svg {
-        font-size: clamp(1rem, 7vw, 1.7rem);
-    }
+  position: relative;
+  z-index: 100;
+  border-top: solid var(--clr-primary) var(--section-border-thickness);
+  svg {
+    font-size: clamp(1rem, 7vw, 1.7rem);
+  }
 }
 .icons {
-    margin: 0 auto;
-    padding: 0.8rem 0;
-    max-width: var(--max-width);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .bio {
-    max-width: var(--max-width-text);
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    letter-spacing: normal;
-    margin: 0 auto;
+  max-width: var(--max-width-text);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: normal;
+  margin: 0 auto;
 }
 
 @include mixin.desktop {
-    .content {
-        max-width: var(--max-width-grid);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: var(--column-gap);
-        h1 {
-            grid-column: 1;
-        }
+  .content {
+    max-width: var(--max-width-grid);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--column-gap);
+    h1 {
+      grid-column: 1;
     }
-    .bio {
-        grid-column: 1;
-        margin-left: 0;
-        margin-right: 0;
-    }
+  }
+  .bio {
+    grid-column: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
